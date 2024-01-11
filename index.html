@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(
+          30deg,
+          rgb(47, 88, 47),
+          rgb(25, 117, 25),
+          rgb(4, 168, 4)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      main {
+        background-color: purple;
+        border-radius: 25px;
+        transition-duration: 1s;
+      }
+      .title {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        font-family: sans-serif;
+        padding: 10px;
+      }
+      @media screen and (max-width: 789px) {
+        main {
+          width: 400px;
+          height: 700px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <section class="title">
+          <h1>SOCIAL</h1>
+        </section>
+        <section class="icon">
+          <a href="" title="github"
+            ><img src="social_icon/github.png" alt="github"
+          /></a>
+          <a href="" title="instagram"
+            ><img src="social_icon/instagram.png" alt="instagram"
+          /></a>
+          <a href="" title="whatsap"
+            ><img src="social_icon/whatsapp.png" alt="whatsapp"
+          /></a>
+          <a href="" title="youtube"
+            ><img src="social_icon/youtube.png" alt="youtube"
+          /></a>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>
