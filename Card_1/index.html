@@ -6,141 +6,128 @@
     <title>Document</title>
     <style>
       * {
-        padding: 0px;
         margin: 0px;
+        padding: 0px;
         box-sizing: border-box;
-      }
-      body {
-        height: 100vh;
       }
 
       main {
         background: linear-gradient(
-          30deg,
-          rgb(47, 88, 47),
-          rgb(25, 117, 25),
-          rgb(4, 168, 4)
+          to right,
+          rgb(0, 175, 0),
+          green,
+          rgb(0, 100, 0)
         );
-        height: 100%;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
       }
 
-      article {
-        border-radius: 25px;
+      div#container {
         background-color: purple;
         display: flex;
         flex-direction: column;
-        transition: 0.3s ease-in;
-        width: 500px;
-        height: 700px;
-        box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);
-        border: 1px solid black;
+        border-radius: 25px 0px 25px 0px;
         overflow: hidden;
-     
+        box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.281);
+        border: 1px solid white;
+        transition: 1s ease;
       }
 
-      .title {
-        flex-grow: 6;
+      section.img {
         background-image: url(imagens/img.jpeg);
-        background-position: top;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
-        text-align: center;
-        font-size: 30px;
-        font-family: sans-serif;
-        padding: 10px;
-        color: rgba(255, 255, 255, 0.884);
+        flex-grow: 8;
       }
 
-      .icon {
-        flex-grow: 2;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: start;
-      }
-
-      .footer {
-        flex-grow: 1;
+      section.icon {
+        flex-grow: 3;
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
       }
 
-      .footer a {
-        color: rgb(255, 255, 255);
-        background-color: rgb(25, 97, 15);
-        padding: 10px;
-        border-radius: 50px;
+      section.footer {
+        flex-grow: 1;
+        position: relative;
+      }
+
+      section.footer a {
+        color: white;
         text-decoration: none;
-        display: block;
+        text-align: center;
+        background-color: green;
+        padding: 5px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
       }
 
-      .footer a:hover {
-        scale: 1.1;
-        transition: 0.5s ease;
+      section.footer a:hover {
+        background-color: rgb(2, 104, 2);
       }
 
-      .element {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-        
-      }
-
-      img {
-        animation: flutuar;
-        animation-duration: 2s;
+      a img {
+        animation-name: flutuar;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
         animation-iteration-count: infinite;
-        animation-timing-function:ease-in;
         animation-direction: alternate;
       }
 
-      @keyframes flutuar {
-        100%{
-          transform: translatey(100%);
-        }
+      a img:hover{
+        transform: scale(1.5);
       }
 
-      @media screen and (max-width: 789px) {
-        article {
-          width: 400px;
-          height: 700px;
+      @keyframes flutuar {
+        100% {
+          transform: translateY(30%);
+        }
+      }
+       {
+      }
+      @media screen and (max-width: 410px) {
+        div#container {
+          width: 200px;
+          height: 400px;
+        }
+      }
+      @media screen and (min-width: 409px) {
+        div#container {
+          width: 300px;
+          height: 500px;
         }
       }
     </style>
   </head>
   <body>
     <main>
-      <article>
-        <section class="title"></section>
+      <div id="container">
+        <section class="img"></section>
         <section class="icon">
-          <div class="element">
-            <a href="https://github.com" target="_blank" title="github"
-              ><img src="imagens/github.png" alt="github"
-            /></a>
-          </div>
-          <div class="element">
-            <a href="https://instagram.com" target="_blank" title="instagram"
-              ><img src="imagens/instagram.png" alt="instagram"
-            /></a>
-          </div>
-          <div class="element">
-            <a href="https://whatsapp.com" target="_blank" title="whatsap"
-              ><img src="imagens/whatsapp.png" alt="whatsapp"
-            /></a>
-          </div>
-          <div class="element">
-            <a href="https://youtube.com" target="_blank" title="youtube"
-              ><img src="imagens/youtube.png" alt="youtube"
-            /></a>
-          </div>
+          <a href="https://github.com" target="_blank" title="github"
+            ><img src="imagens/github.png" alt="github"
+          /></a>
+          <a href="https://instagram.com" target="_blank" title="instagram"
+            ><img src="imagens/instagram.png" alt="instagram"
+          /></a>
+          <a href="https://whatsapp.com" target="_blank" title="whatsapp"
+            ><img src="imagens/whatsapp.png" alt="whatsapp"
+          /></a>
+          <a href="https://youtube.com" target="_blank" title="youtube"
+            ><img src="imagens/youtube.png" alt="youtube"
+          /></a>
         </section>
-        <section class="footer"><a href="https://github.com/shingling12">SAIBA MAIS</a></section>
-      </article>
+        <section class="footer">
+          <a href="https://github.com/shingling12" target="_blank"
+            >SAIBA MAIS</a
+          >
+        </section>
+      </div>
     </main>
   </body>
 </html>
