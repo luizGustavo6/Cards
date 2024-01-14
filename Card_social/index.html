@@ -44,6 +44,10 @@
         width: 50px;
         clip-path: polygon(0 0, 0 100%, 50px 0);
       }
+
+      div {
+        overflow: hidden;
+      }
       div.whatsapp header div {
         background-color: green;
         height: 50px;
@@ -105,6 +109,7 @@
         background-color: white;
         transition: 0.6s ease;
         z-index: 4;
+        width: 54px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
       }
 
@@ -152,17 +157,75 @@
       div.linkedin footer a {
         background-color: rgba(14, 120, 170, 0.984);
       }
+      div.instagram footer a:hover {
+        background: linear-gradient(
+          to left,
+          rgb(64, 93, 230, 0.5),
+          rgb(88, 81, 219, 0.5),
+          rgb(131, 58, 180, 0.5),
+          rgb(193, 53, 132, 0.5),
+          rgb(225, 48, 108, 0.5)
+        );
+        color: black;
+      }
+      div.whatsapp footer a:hover {
+        background-color: rgb(0, 128, 0, 0.5);
+        color: black;
+      }
+      div.youtube footer a:hover {
+        background-color: rgba(255, 0, 0, 0.541);
+        color: black;
+      }
+      div.linkedin footer a:hover {
+        background-color: rgba(14, 121, 170, 0.63);
+        color: black;
+      }
+      div.linkedin footer a:active {
+        scale: 0.9;
+      }
 
-      @media screen and (max-width:668px){
-
-        article{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: 80%;
-            height: 60%;
+      @media screen and (max-width: 668px) {
+        main {
+          height: 100vh;
         }
+        article {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 80%;
+          min-width: 10%;
+        }
+
+        div.instagram {
+            width:200px;
+        }
+        div.whatsapp {
+            width:200px;
+        }
+        div.youtube {
+            width:200px;
+        }
+        div.linkedin {
+            width:200px;
+        }
+
+        div.instagram:hover {
+        width: 800px;
+      }
+
+      div.whatsapp:hover {
+        width: 800px;
+      }
+
+      div.youtube:hover {
+        width: 800px;
+      }
+
+      div.linkedin:hover {
+        width: 800px;
+      }
+        
       }
     </style>
   </head>
@@ -172,25 +235,25 @@
         <div class="instagram">
           <header><div></div></header>
           <footer>
-            <a href="https://instagram.com">ACESSE</a>
+            <a href="https://instagram.com" target="_blank">ACESSE</a>
           </footer>
         </div>
         <div class="whatsapp">
           <header><div></div></header>
           <footer>
-            <a href="https://whatsapp.com">ACESSE</a>
+            <a href="https://whatsapp.com" target="_blank">ACESSE</a>
           </footer>
         </div>
         <div class="youtube">
           <header><div></div></header>
           <footer>
-            <a href="https://youtube.com">ACESSE</a>
+            <a href="https://youtube.com" target="_blank">ACESSE</a>
           </footer>
         </div>
         <div class="linkedin">
           <header><div></div></header>
           <footer>
-            <a href="https://linkedin.com">ACESSE</a>
+            <a href="https://linkedin.com" target="_blank">ACESSE</a>
           </footer>
         </div>
       </article>
